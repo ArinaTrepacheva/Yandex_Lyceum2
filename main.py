@@ -26,8 +26,8 @@ class Example(QMainWindow):
         self.update()
 
     def draw(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
         for i in range(randrange(1, 10)):
+            qp.setBrush(QColor(randrange(0, 255), randrange(0, 255), randrange(0, 255)))
             diametr = randrange(1, 100)
             cor = (randrange(1, 700), randrange(1, 600), diametr, diametr)
             qp.drawEllipse(*cor)
